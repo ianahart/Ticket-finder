@@ -1,4 +1,4 @@
-## Lorem Ipsum Generator
+## Ticket finder App
 
 ---
 

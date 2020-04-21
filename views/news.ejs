@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%-include ('includes/head.ejs') %>
+
+  <body class="body-background">
+    <div class="container-fluid">
+      <%- include('includes/navigation.ejs') %>
+
+      <%if (errorMessage) { %>
+        <p class="error-news"><%= errorMessage%></p>
+      <%}%>
+      <h1 class="news-title">Latest in Entertainment</h1>
+      <div class="news-container">
+        <%data.forEach(function(article) {%>
+          <div class="article">
+            <p><%=article.title%></p>
+            <p><span class="author">Author: </span><%=article.author%></p>
+            <p><span class="source">Source: </span><%=article.source.name%></p>
+            <p><span class="published">Published: </span><%=article.publishedAt%></p>
+            <p class="desc"><%=article.description%><a href="<%=article.url%>">Read more...</a></p>
+            <a href="<%= article.url %>"><img class="article-img" src="<%= article.urlToImage %>"/></a>
+          </div>
+        <%})%>
+      </div>
+    </div>
+    <%- include('includes/footer.ejs') %>
+  </body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('includes/head.ejs') %>
+  <body class="body-background">
+    <div class="container-fluid">
+      <%- include('includes/navigation.ejs') %>
+      <div class="form-container">
+        <form class="events-form" action="/searchevents" method="POST">
+          <h3 class="events-title">
+            Type in a city name to get events for that city.
+          </h3>
+          <% if (error_message.length > 0) { %>
+          <p class="error-message"><%= error_message%></p>
+          <%} %>
+
+           <% if (errors) {%>
+              <%errors.forEach(function(err) {%>
+                <p class="error-message"><%= err.message%></p>
+              <%})%>
+            <%}%>
+
+          <input
+            class="events-input"
+            type="text"
+            placeholder="Search Events..."
+            name="city"
+          />
+          <button class="events-button" type="submit">
+            Search <i class="fas fa-search"></i>
+          </button>
+        </form>
+      </div>
+      <div class="events-output">
+        <%if (city) { %>
+          <h2>Shows In <%=city%></h2>
+       <% } %>
+
+        <%if (eventData.length > 0) {%>
+         <% eventData.forEach(function(event) {%>
+          <div class="event-wrapper">
+            <p class="event-name"><%=event.name%></p>
+            <p><span class="date">Date:</span> <%=event.dates.start.localDate%></p>
+            <%if (event.dates.status.code === 'onsale') {%>
+            <p><span class="status">Status: </span><%= event.dates.status.code%> 🔥</p>
+            <%} else {%>
+          <p><span class="status">Status: </span><%= event.dates.status.code%></p>
+           <% }%>
+            <p><span class="genre">Genre: </span><%= event.classifications[0].genre.name%></p>
+            <p><span class="venue">Venue: </span> <%= event._embedded.venues[0].name%> </p>
+            <img class="event-images" src="<%=`${event.images[4].url}`%>"/>
+              <button class="get-tickets-btn"><a class="get-tickets-link" href="https://www.ticketmaster.com/">Get Tickets</a></button>
+          </div>
+          <%})%>
+        <%}%>
+      </div>
+    </div>
+    <%- include('includes/footer.ejs') %>
+  </body>
+</html>

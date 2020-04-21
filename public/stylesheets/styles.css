@@ -1,0 +1,351 @@
+html,
+body {
+  height: 100%;
+}
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.container-fluid {
+  margin: 0;
+  padding: 0;
+  flex: 1 0 auto;
+}
+
+.navigation {
+  display: flex;
+  justify-content: flex-end;
+  list-style: none;
+}
+
+nav {
+  background: tomato;
+  padding: 1rem;
+}
+
+.home-anchor {
+  position: absolute;
+}
+
+.nav-link {
+  margin-left: 2rem;
+}
+
+.nav-link a {
+  color: whitesmoke;
+  text-decoration: none;
+}
+
+.fa-ticket-alt {
+  font-size: 3rem;
+  color: whitesmoke;
+}
+
+.body-background {
+  background-image: url("../img/background.jpg");
+  background-size: cover;
+}
+
+.website-name {
+  position: absolute;
+  top: 0;
+  margin-left: 1rem;
+  font-size: 2.2rem;
+  font-family: "Comic Neue", cursive;
+}
+
+.website-name a {
+  text-decoration: none;
+}
+
+.footer p {
+  text-align: center;
+  color: whitesmoke;
+  font-size: 1rem;
+}
+
+.help-title,
+.about-title,
+.news-title {
+  color: black;
+  background: transparent;
+  width: 40%;
+  margin: 2rem auto;
+  border: 1px solid whitesmoke;
+  border-radius: 0.25rem;
+  padding: 1rem;
+  font-family: "Comic Neue", cursive;
+}
+
+.help-container {
+  margin: 0 auto;
+  width: 50%;
+}
+
+.help-container ol {
+  list-style-type: none;
+  border: 2px solid whitesmoke;
+  border-radius: 0.25rem;
+}
+.help-container ol li {
+  color: black;
+  margin: 1rem;
+  padding: 1rem;
+  font-family: "Poppins", sans-serif;
+}
+
+.extras-div {
+  color: whitesmoke;
+  width: 50%;
+}
+
+.extras-div-end {
+  text-align: center;
+  margin: 0 auto;
+  width: 30%;
+}
+
+.help-extras-container {
+  margin: 0 auto;
+  margin-top: 8rem;
+  max-width: 800px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-items: center;
+  font-family: "Poppins", sans-serif;
+}
+
+.help-icon {
+  font-size: 3rem;
+}
+
+.slideshow-container {
+  width: 70%;
+  margin: 0 auto;
+  margin-top: 10rem;
+}
+
+.slideshow-img {
+  width: 100%;
+}
+
+.left-arrow-slide {
+  color: tomato;
+  font-size: 5rem;
+  position: absolute;
+  top: 35%;
+  transition: color 0.4s ease-in-out;
+  cursor: pointer;
+}
+
+.right-arrow-slide {
+  color: tomato;
+  font-size: 5rem;
+  position: absolute;
+  top: 35%;
+  left: 79%;
+  transition: color 0.4s ease-in-out;
+  cursor: pointer;
+}
+
+.left-arrow-slide:hover,
+.right-arrow-slide:hover {
+  color: red;
+}
+
+.caption-text {
+  color: whitesmoke;
+  width: 50%;
+  margin: 0 auto;
+  border: 1px solid whitesmoke;
+  border-radius: 0.25rem;
+  font-family: "Poppins", sans-serif;
+}
+
+.captions {
+  text-align: center;
+  margin: 0 auto;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.about-desc-container {
+  margin-top: 5rem;
+}
+
+.about-desc {
+  color: whitesmoke;
+  margin: 0 20px;
+}
+
+.form-container {
+  text-align: center;
+  margin: 0 auto;
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.events-form {
+  width: 100%;
+}
+
+.events-input {
+  width: 50%;
+  max-width: 400px;
+  text-align: center;
+  background: transparent;
+  border: none;
+  outline: none;
+  border: 2px solid whitesmoke;
+  border-radius: 0.25rem;
+  color: whitesmoke;
+  height: 30px;
+}
+
+.events-input::placeholder {
+  color: whitesmoke;
+}
+
+.events-title {
+  color: whitesmoke;
+  border: 2px solid whitesmoke;
+  border-radius: 0.25rem;
+  padding: 0.6rem;
+  width: 50%;
+  max-width: 400px;
+  margin: 0 auto;
+  margin-bottom: 2rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 900;
+  color: #337ab7;
+}
+
+.events-button {
+  background: transparent;
+  color: whitesmoke;
+  border: none;
+  outline: none;
+  border: 2px solid whitesmoke;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  transition: color 0.6s ease-in;
+}
+
+.events-button:hover {
+  color: #337ab7;
+  border: 2px solid #337ab7;
+}
+
+.events-output {
+  text-align: center;
+  color: whitesmoke;
+}
+
+.error-message{
+  color: #337ab7;
+  border: 2px solid tomato;
+  width: 40%;
+  margin: 1rem auto;
+  padding: 1rem;
+}
+
+.event-images {
+  width: 250px;
+}
+
+.event-wrapper {
+  border: 2px solid whitesmoke;
+  width: 50%;
+  margin: 0 auto;
+  margin-bottom: 3rem;
+  border-radius: 0.25rem;
+  padding: 1rem;
+  background-color: rgba(0, 0,0,0.3);
+}
+
+.date,
+.price,
+.venue,
+.status,
+.genre {
+  color: tomato;
+}
+
+.event-name {
+  font-size: 1.7rem;
+}
+
+.seat-map {
+  display: block;
+  font-size: 1.3rem;
+}
+
+.get-tickets-btn {
+  display: block;
+  margin: 0 auto;
+  margin-top: 3rem;
+  background-color: rgba(0, 0,0,0.3);
+  border: none;
+  outline: none;
+  border-radius: 0.25rem;
+}
+
+.get-tickets-link {
+  color: whitesmoke;
+}
+
+.get-tickets-link:hover {
+  color: whitesmoke;
+  text-decoration: none;
+}
+
+.error-news {
+  font-size: 3rem;
+  font-family: "Comic Neue", cursive;
+  color: #337ab7;
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.article-img {
+  width: 300px;
+}
+
+.news-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  margin-top: 15rem;
+  color: white;
+  background-color: rgba(0, 0,0,0.3);
+}
+
+.article {
+  margin: 3rem;
+}
+
+.author,
+.source,
+.published {
+  color: tomato;
+}
+
+
+
+
+
+
+@media only screen and (min-width: 600px) {
+  .news-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .news-container {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
